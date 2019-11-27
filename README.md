@@ -4,7 +4,15 @@
 > An Entry Management Software
 
 GateKeeper is an entry management software used to keep track of the visitors in and out of the office.
-GateKeeper provides hassle free experience for visitors to Check-in & Check-out easily and accuratelysss
+GateKeeper provides hassle free experience for visitors to Check-in & Check-out easily and accurately.
+
+## Technologies Used
+
+Frontend : HTML ,CSS ,JAVASCRIPT, ParticlesJS
+Backend  : NodeJS
+Database : MongoDB
+API's    : Twilio
+
 
 ## Installing / Getting started
 
@@ -35,6 +43,7 @@ In the index.js file,
 * User must enter the email id and password in order to allow nodemailer to send emails using the provided email id.
 Note:- The Allow less secured apps must be checked in Gmail so as to send mails smoothly.
 
+P.S: Twilio API has been used for sending out SMS and Nodejs nodemailer has been used for sending out emails.
 
 ## Features
 
