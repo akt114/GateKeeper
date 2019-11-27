@@ -6,7 +6,7 @@ const details = require('./schemas/details.js')
 const twilio = require('twilio');
 const otpGenerator = require('otp-generator')
 const nodemailer = require('nodemailer');
-const config=require('./config/config.js/index.js');
+const config=require('./config/config.js');
 const client = new twilio(config.twilio.accountSid,config.twilio.authToken);
 
 //setting up express app
