@@ -67,7 +67,10 @@ P.S: Twilio API has been used for sending out SMS and Nodejs nodemailer has been
     * The visitor receives an email and a SMS which contains his/her visiting details, which       includes his name,number,checkin time,checkout time,host name and the address visited.
     * The host also receives an email and a SMS notifying him that the visitor has checked out     successfully.
 
+NOTE : The screenshots of the emails and SMS received by the visitor and the host during checkin        and checkout can be found in the Screenshots folder in this repository.The link for the          same can be found below in the Links section. 
+
 
 ## Links
 
-- Repository: https://github.com/akt114/GateKeeper
+- Repository:  https://github.com/akt114/GateKeeper
+- Screenshots: https://github.com/akt114/GateKeeper/tree/master/screenshots 
