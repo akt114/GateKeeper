@@ -9,9 +9,13 @@ GateKeeper provides hassle free experience for visitors to Check-in & Check-out 
 ## Technologies Used
 
 Frontend : HTML ,CSS ,JAVASCRIPT, ParticlesJS
+
 Backend  : NodeJS
+
 Database : MongoDB
+
 API's    : Twilio
+
 
 
 ## Installing / Getting started
