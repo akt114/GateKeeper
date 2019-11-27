@@ -38,7 +38,21 @@ Note:- The Allow less secured apps must be checked in Gmail so as to send mails 
 
 ## Features
 
+* While entering the office,the Visitor needs to check-in using GateKeeper Software. During        Check-in he/she is required to fill the checkin form which contains fields like vistors name,    email and number along with the host's name,email and number.
 
+* As soon as the visitor submits the checkin form :-
+
+    * The visitor receives an email and a SMS which contains his/her visiting ID (which is         unique for everyone & will be required during checkout).
+
+    * The host also receives an email and a SMS which contains the Visitor's information like      the visitor's name,email,number,checkin time.
+
+
+* After the meeting or visit is over, the visitor needs to check out by entering his visiting ID   in the checkout form, which is then verified and the visitor ,thus,successfully checks out.
+
+* As soon as the visitor successfully checks out :-
+
+    * The visitor receives an email and a SMS which contains his/her visiting details, which       includes his name,number,checkin time,checkout time,host name and the address visited.
+    * The host also receives an email and a SMS notifying him that the visitor has checked out     successfully.
 
 
 ## Links
