@@ -1,5 +1,4 @@
 const express=require('express');
-const app=express();
 const bodyParser = require('body-parser');
 const ejs = require('ejs');
 const path = require('path');
@@ -10,20 +9,26 @@ const nodemailer = require('nodemailer');
 const config=require('./config/config.js/index.js');
 const client = new twilio(config.twilio.accountSid,config.twilio.authToken);
 
+//setting up express app
+const app=express();
+
+//setting up MIDDLEWARES
 app.set('view engine','ejs');
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended : true}));
 app.use(express.static(path.join(__dirname, 'public')));
 
-
+//GET API for homepage
 app.get('/',(req,res)=>{
     res.render('home.ejs');
 })
 
+//GET API for checkin-page
 app.get('/checkin',(req,res)=>{
     res.render('checkinform.ejs');  
 })
 
+//POST API for checkin-page
 app.post('/checkin',(req,res)=>{
     var o=req.body;
     console.log(req.body);
@@ -140,13 +145,13 @@ res.redirect('/');
 })
 
 
-
+//GET API for checkout-page
 app.get('/checkout',(req,res)=>{
     res.render('checkoutform.ejs');
 })
 
 
-
+//POST API for checkout-page
 app.post('/checkout',(req,res)=>{
    var p=req.body;
     var timestamp=Date.now();
@@ -198,7 +203,7 @@ app.post('/checkout',(req,res)=>{
       });
 
       //CHECKOUT SMS TO VISITOR
-      // var sender = '+15005550006';
+      
       var sender='+12563803259';
   var receiver = vnumber;
   var message = `
@@ -241,7 +246,6 @@ var mailOptions = {
   });
 
   //CHECKOUT SMS SEND TO HOST
-
 var sender='+12563803259';  
 var receiver = hnumber;
 var message = `
@@ -264,6 +268,7 @@ res.redirect('/');
 })
 })
 
+//configuring port number for app
 app.listen(config.port,()=>{
     console .log(`Server is running on port ${config.port}`);
 })

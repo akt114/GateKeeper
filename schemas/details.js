@@ -1,10 +1,14 @@
+//importing mongoose
 const mongoose=require('mongoose');
+
+//setting up database connection
 mongoose.connect('mongodb://akt114:Summergeeks114@ds121183.mlab.com:21183/summergeeks',{ useNewUrlParser: true,useUnifiedTopology: true },()=>{
     console.log('connected with database');
 });
 
 const Schema=mongoose.Schema;
 
+//defining Schema for database
 const detailSchema=new Schema({
    vname:{
        type:String,
@@ -49,4 +53,5 @@ const detailSchema=new Schema({
    }
 })
 
+//exporting detailSchema
 module.exports=mongoose.model('details',detailSchema);
